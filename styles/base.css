@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Section */
 header {
     background-color: #00274d;
     color: white;
@@ -16,6 +18,7 @@ h1 {
     margin: 0;
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
@@ -27,12 +30,15 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: #555;
+    border-radius: 5px;
 }
 
+/* Main Content Layout */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -40,13 +46,16 @@ main {
     gap: 20px;
 }
 
+/* Card Layout */
 .card {
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Content Alignment */
 .content {
     display: flex;
     align-items: center;
@@ -56,16 +65,25 @@ main {
 .content img {
     max-width: 150px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
+/* Aside Section */
 aside {
     text-align: center;
 }
 
+/* Footer Section */
 footer {
     background-color: #00274d;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
+    border-top: 3px solid #444;
 }
+
+footer p {
+    margin: 5px;
+}
+
