@@ -43,7 +43,10 @@ main {
     max-width: 800px;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-areas:
+        "about resources"
+        "hongkong resources";
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -83,11 +86,21 @@ main {
 /* Aside Section */
 aside {
     text-align: center;
+    grid-area: resources;
 }
 
 aside ul li a {
     display: block;
     padding: 5px;
+}
+
+/* Section Specific Grid Areas */
+section:nth-child(1) {
+    grid-area: about;
+}
+
+section:nth-child(2) {
+    grid-area: hongkong;
 }
 
 /* Footer Section */
@@ -103,4 +116,3 @@ footer {
 footer p {
     margin: 5px;
 }
-
