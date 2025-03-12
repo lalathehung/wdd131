@@ -43,9 +43,7 @@ main {
     max-width: 800px;
     margin: 20px auto;
     display: grid;
-    grid-template-areas:
-        "about resources"
-        "hongkong resources";
+    grid-template-areas: "content resources";
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
@@ -94,13 +92,9 @@ aside ul li a {
     padding: 5px;
 }
 
-/* Section Specific Grid Areas */
-section:nth-child(1) {
-    grid-area: about;
-}
-
-section:nth-child(2) {
-    grid-area: hongkong;
+/* Section Specific Grid Area */
+section {
+    grid-area: content;
 }
 
 /* Footer Section */
