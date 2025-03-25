@@ -120,6 +120,7 @@ main {
     margin: 1rem auto;
     max-width: 730px;
     padding: 0 1rem;
+    text-align: center; /* Added to center all content in <main> */
 }
 
 .home {
