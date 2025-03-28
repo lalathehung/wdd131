@@ -64,7 +64,8 @@ header {
     color: var(--headline-color-on-color);
 }
 
-header .nameHeader {
+header h1 {
+    color: #FFFFFF; /* Make "Temple Album" white */
     margin: auto 5px;
     font-size: 1.5rem;
 }
@@ -120,7 +121,7 @@ main {
     margin: 1rem auto;
     max-width: 730px;
     padding: 0 1rem;
-    text-align: center; /* Added to center all content in <main> */
+    text-align: center;
 }
 
 .home {
