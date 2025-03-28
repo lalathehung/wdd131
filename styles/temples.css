@@ -65,7 +65,7 @@ header {
 }
 
 header h1 {
-    color: #FFFFFF !important; 
+    color: #FFFFFF !important; /* Ensure white color */
     margin: auto 5px;
     font-size: 1.5rem;
 }
