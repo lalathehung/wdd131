@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamButton.classList.toggle('open');
     });
 
-    // Temple data with your original 9 temples plus Taipei Taiwan Temple
+    // Temple data 
     const temples = [
         {
             name: "Salt Lake Utah Temple",
