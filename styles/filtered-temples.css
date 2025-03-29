@@ -1,0 +1,172 @@
+:root {
+    /* Color palette */
+    --primary-color-Rich-black: #0D1B2A;
+    --secondary-color-Oxford-Blue: #1B263B;
+    --accent1-color-YInMn-Blue: #415A77;
+    --accent2-color-SilverLake-Blue: #778DA9;
+    --accent3-color-Platinum: #E0E1DD;
+
+    /* Fonts */
+    --poppins-regular: "Poppins", sans-serif;
+    --poppins-regular-weight: 400;
+    --poppins-thin: "Poppins", sans-serif;
+    --poppins-thin-weight: 100;
+
+    /* Semantic colors */
+    --headline-color-on-white: var(--primary-color-Rich-black);
+    --headline-color-on-color: var(--accent3-color-Platinum);
+    --paragraph-color-on-white: var(--primary-color-Rich-black);
+    --paragraph-color-on-color: var(--accent3-color-Platinum);
+    --paragraph-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-link-color: var(--accent3-color-Platinum);
+    --nav-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
+    --nav-hover-background-color: var(--primary-color-Rich-black);
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--poppins-regular);
+    font-weight: var(--poppins-regular-weight);
+}
+
+/* Mobile View */
+h1, h2 {
+    font-family: var(--poppins-regular);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--headline-color-on-white);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: var(--poppins-regular);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--nav-background-color);
+    padding: 10px;
+    color: var(--headline-color-on-color);
+}
+
+header h1 {
+    color: #FFFFFF !important; /* Ensure white color */
+    margin: auto 5px;
+    font-size: 1.5rem;
+}
+
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background-color: var(--nav-background-color);
+    color: var(--accent1-color-YInMn-Blue);
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--nav-link-color);
+    width: 100%;
+}
+
+.navigation a:hover {
+    color: var(--accent3-color-Platinum);
+    text-decoration: underline 2px solid var(--accent3-color-Platinum);
+    transition: all 300ms ease-in-out;
+}
+
+.open a {
+    display: block;
+    font-size: 1.5rem;
+}
+
+/* Main */
+main {
+    margin: 1rem auto;
+    max-width: 730px;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column in mobile */
+    grid-gap: 25px;
+    place-items: center;
+    margin: 5px 0;
+}
+
+/* Temple Card Styling */
+figure {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure rounded corners apply to the image */
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Match your original width */
+}
+
+figcaption {
+    font-size: smaller;
+    text-align: left; /* Align text to the left like the example */
+    padding: 0.5rem;
+}
+
+figcaption h3 {
+    font-size: 1.2rem; /* Larger font for the temple name */
+    font-weight: bold; /* Bold like the example */
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    font-size: 0.9rem; /* Smaller font for details */
+    margin: 0.2rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-background-color);
+    color: var(--headline-color-on-color);
+    text-align: center;
+    padding: 1rem;
+}
