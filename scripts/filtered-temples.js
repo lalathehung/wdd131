@@ -81,6 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "1984-11-17",
             area: 9945,
             image: "images/taipeitemple.jpg"
+        },
+        {
+            name: "Seattle Washington Temple",
+            location: "Bellevue, Washington, USA",
+            dedicated: "1980-11-17",
+            area: 110000,
+            image: "images/seattletemple.jpg"
+        },
+        {
+            name: "Washington D.C. Temple",
+            location: "Kensington, Maryland, USA",
+            dedicated: "1974-11-19",
+            area: 160000,
+            image: "images/washingtontemple.jpg"
         }
     ];
 
