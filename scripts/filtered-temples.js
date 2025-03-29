@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamButton.classList.toggle('open');
     });
 
-    // Temple data with your original 9 temples and accurate information
+    // Temple data with your original 9 temples plus Taipei Taiwan Temple
     const temples = [
         {
             name: "Salt Lake Utah Temple",
@@ -74,6 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2020-10-31",
             area: 16643,
             image: "images/winnipegtemple.jpg"
+        },
+        {
+            name: "Taipei Taiwan Temple",
+            location: "Taipei, Taiwan",
+            dedicated: "1984-11-17",
+            area: 9945,
+            image: "images/taipeitemple.jpg"
         }
     ];
 
