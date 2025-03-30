@@ -1,0 +1,32 @@
+@media (min-width: 750px) {
+    main {
+        grid-template-areas:
+            "weather facts"
+            "culture culture";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weather {
+        grid-area: weather;
+    }
+
+    .facts {
+        grid-area: facts;
+    }
+
+    .culture {
+        grid-area: culture;
+    }
+
+    .weather-icon-mobile {
+        display: none; /* Hide SVG in larger views */
+    }
+
+    .weather h2::after {
+        display: inline; /* Show pseudo-element icon in larger views */
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}

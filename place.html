@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Hong Kong</title>
+    <meta name="description" content="A webpage showcasing Hong Kong, its culture, weather, and facts for WDD 131 Week 03 Country Page assignment">
+    <meta name="keywords" content="Hong Kong, Victoria Harbour, skyline, culture, dim sum">
+    <meta name="author" content="Lok Yin Arthur Leung">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Explore Hong Kong</h1>
+        <picture class="hero">
+            <source media="(min-width: 750px)" srcset="images/hongkong-large.webp">
+            <source media="(min-width: 500px)" srcset="images/hongkong-medium.webp">
+            <img src="images/hongkong-small.webp" alt="Hong Kong skyline at Victoria Harbour" loading="lazy">
+        </picture>
+    </header>
+    <main>
+        <section class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon-mobile" loading="lazy">
+            <p>Temperature: <span id="temperature">20</span> °C</p>
+            <p>Wind Speed: <span id="wind-speed">10</span> km/h</p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+            <p>Conditions: Partly cloudy</p>
+        </section>
+        <section class="facts">
+            <h2>Facts About Hong Kong</h2>
+            <ul>
+                <li>Status: Special Administrative Region of China</li>
+                <li>Population: ~7.5 million</li>
+                <li>Languages: Cantonese, English, Mandarin</li>
+                <li>Currency: Hong Kong Dollar (HKD)</li>
+            </ul>
+        </section>
+        <section class="culture">
+            <h2>Hong Kong Culture</h2>
+            <p>Hong Kong is a blend of East and West, known for its skyscrapers, bustling markets, and dim sum cuisine. Festivals like Chinese New Year and the Mid-Autumn Festival are celebrated with vibrant traditions.</p>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> - Lok Yin Arthur Leung - Hong Kong</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

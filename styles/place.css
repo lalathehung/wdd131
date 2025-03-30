@@ -1,0 +1,100 @@
+:root {
+    /* Color scheme inspired by Hong Kong's flag and culture */
+    --primary-color: #DE2910; /* Red from flag */
+    --secondary-color: #2D2D2D; /* Dark gray */
+    --background-color: #F0F0F0; /* Light gray */
+    --text-color: #2D2D2D;
+    --white: #FFFFFF;
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header */
+header {
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "weather"
+        "facts"
+        "culture";
+    grid-template-columns: 1fr;
+}
+
+/* Sections */
+.weather, .facts, .culture {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather h2::after {
+    content: "⛅"; /* Pseudo-element for weather icon in larger views */
+    margin-left: 0.5rem;
+    display: none; /* Hidden in mobile */
+}
+
+.weather-icon-mobile {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem 0;
+}
+
+.weather p, .facts ul, .culture p {
+    margin: 0.5rem 0;
+}
+
+.facts ul {
+    list-style-type: none;
+}
+
+.facts li {
+    margin: 0.3rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
