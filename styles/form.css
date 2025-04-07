@@ -6,6 +6,8 @@
     --text-color: #2D2D2D;
     --white: #FFFFFF;
     --highlight-color: #FF5555; /* Lighter red for hover */
+    /* Add this if you meant to use it */
+    /* --primary-color-rich-black: #some-color; */
 }
 
 /* General */
@@ -109,7 +111,7 @@ input[type="checkbox"] {
     color: var(--highlight-color);
 }
 
-/* Screen reader only - Updated to use clip-path instead of clip */
+/* Screen reader only */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -117,8 +119,14 @@ input[type="checkbox"] {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip-path: inset(50%); /* Modern replacement for clip */
+    clip-path: inset(50%);
     border: 0;
+}
+
+/* Fix for the validator error - assuming .rating-box is intended */
+.rating-box label {
+    border: 1px solid var(--primary-color); /* Corrected from border-radius */
+    /* If this was meant for .rating instead, move it there */
 }
 
 textarea {
