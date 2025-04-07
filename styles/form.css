@@ -1,13 +1,11 @@
 :root {
     /* Color scheme */
-    --primary-color: #DE2910; /* Red from Hong Kong flag */
-    --secondary-color: #2D2D2D; /* Dark gray */
-    --background-color: #F0F0F0; /* Light gray */
+    --primary-color: #DE2910;
+    --secondary-color: #2D2D2D;
+    --background-color: #F0F0F0;
     --text-color: #2D2D2D;
     --white: #FFFFFF;
-    --highlight-color: #FF5555; /* Lighter red for hover */
-    /* Add this if you meant to use it */
-    /* --primary-color-rich-black: #some-color; */
+    --highlight-color: #FF5555;
 }
 
 /* General */
@@ -123,10 +121,22 @@ input[type="checkbox"] {
     border: 0;
 }
 
-/* Fix for the validator error - assuming .rating-box is intended */
+/* Fix for validator error */
 .rating-box label {
-    border: 1px solid var(--primary-color); /* Corrected from border-radius */
-    /* If this was meant for .rating instead, move it there */
+    border: 1px solid var(--primary-color);
+}
+
+/* Fix for checkbox alignment */
+fieldset .form-group div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+fieldset .form-group label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal; /* Optional: keeps it less bold than other labels */
 }
 
 textarea {
