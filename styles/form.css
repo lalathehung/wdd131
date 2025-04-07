@@ -136,7 +136,7 @@ fieldset .form-group div {
 fieldset .form-group label {
     display: inline;
     margin-bottom: 0;
-    font-weight: normal; /* Optional: keeps it less bold than other labels */
+    font-weight: normal;
 }
 
 textarea {
