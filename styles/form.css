@@ -126,14 +126,14 @@ input[type="checkbox"] {
     border: 1px solid var(--primary-color);
 }
 
-/* Fix for checkbox alignment */
-fieldset .form-group div {
+/* Checkbox alignment fix */
+fieldset.form-group div {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
 }
 
-fieldset .form-group label {
+fieldset.form-group label {
     display: inline;
     margin-bottom: 0;
     font-weight: normal;
