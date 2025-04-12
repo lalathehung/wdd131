@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Plan Your Visit | PEI Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd131/project/images/logo.jpg">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd131/project/plan.html">
+    <meta property="og:description" content="Plan your visit to Prince Edward Island with PEI Explorer to explore top attractions and events.">
+    <meta property="fb:app_id" content="your-app-id-here">
+    <title>Plan Your Visit | PEI Explorer</title>
+    <meta name="description" content="Plan your tourism experience with PEI Explorer" />
+    <meta name="author" content="Lok Yin Arthur Leung" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/plan.css" />
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/plan.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="join-page">
+    <div id="meeting-banner">
+        <p>🌊 Join us for the PEI Explorer Coastal Festival this Wednesday at 7:00 PM!</p>
+        <button id="close-banner">Close</button>
+    </div>
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="PEI Explorer Logo" />
+                <p class="nameHeader">PEI<br>Explorer</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="attractions.html">Attractions</a></li>
+                <li><a class="nav-a active" href="plan.html">Plan Your Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Plan Your Visit with PEI Explorer</h1>
+        <div class="content-wrapper">
+            <form method="get" action="thankyou.html">
+                <h2 class="sub-title-form">Visitor Information</h2>
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required placeholder="First">
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required placeholder="Last">
+                </label>
+                <label>
+                    Travel Group Name:
+                    <input type="text" name="travelGroupName" title="Enter your travel group name (minimum 7 characters, letters, hyphens, spaces only)" autocomplete="organization" pattern="[A-Za-z\s\-]{7,}" required>
+                </label>
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+                </label>
+                <label>
+                    Mobile Phone Number:
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required placeholder="+1 902 123 4567">
+                </label>
+                <label>
+                    Home City:
+                    <input type="text" name="homeCity" title="Enter your home city" required>
+                </label>
+                <label>
+                    Visitor Package:
+                    <select name="visitorPackage" required>
+                        <option value="" disabled selected>Select a visitor package</option>
+                        <option value="Explorer">Explorer Package (Basic)</option>
+                        <option value="Adventurer">Adventurer Package</option>
+                        <option value="Discoverer">Discoverer Package</option>
+                        <option value="Voyager">Voyager Package (Premium)</option>
+                    </select>
+                </label>
+                <label>
+                    Travel Interests:
+                    <textarea name="travelInterests" title="Describe your travel interests" rows="4"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <button class="join-us" type="submit">Submit Information</button>
+            </form>
+
+            <section class="membership-container">
+                <h2 class="sub-title-member">Visitor Packages</h2>
+                <div class="card">
+                    <h3>Explorer Package</h3>
+                    <button class="css-button-arrow--black" id="npButton" aria-label="Learn more about Explorer Package">
+                        <span class="visually-hidden">Learn More</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <h3>Adventurer Package</h3>
+                    <button class="css-button-arrow--black" id="bronzeButton" aria-label="Learn more about Adventurer Package">
+                        <span class="visually-hidden">Learn More</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <h3>Discoverer Package</h3>
+                    <button class="css-button-arrow--black" id="silverButton" aria-label="Learn more about Discoverer Package">
+                        <span class="visually-hidden">Learn More</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <h3>Voyager Package</h3>
+                    <button class="css-button-arrow--black" id="goldButton" aria-label="Learn more about Voyager Package">
+                        <span class="visually-hidden">Learn More</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="npModal"></dialog>
+        <dialog id="bronzeModal"></dialog>
+        <dialog id="silverModal"></dialog>
+        <dialog id="goldModal"></dialog>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>PEI Explorer</p>
+            <p>123 Coastal Road</p>
+            <p>Charlottetown, PE</p>
+            <p><a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a></p>
+            <p>+1 902-555-1234</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD131 Class Project</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> PEI Explorer</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

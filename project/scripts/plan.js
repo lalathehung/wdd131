@@ -1,0 +1,59 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampField = document.getElementById("timestamp");
+    timestampField.value = new Date().toISOString();
+
+    const modals = {
+        npModal: document.getElementById("npModal"),
+        bronzeModal: document.getElementById("bronzeModal"),
+        silverModal: document.getElementById("silverModal"),
+        goldModal: document.getElementById("goldModal"),
+    };
+
+    const buttons = {
+        npButton: document.getElementById("npButton"),
+        bronzeButton: document.getElementById("bronzeButton"),
+        silverButton: document.getElementById("silverButton"),
+        goldButton: document.getElementById("goldButton"),
+    };
+
+    const modalContent = {
+        npModal: {
+            title: "Explorer Package Benefits",
+            content: "Access to basic itineraries, event listings, and a welcome guide for first-time visitors to Prince Edward Island.",
+        },
+        bronzeModal: {
+            title: "Adventurer Package Benefits",
+            content: "Includes Explorer benefits plus curated day trips, discounted attraction tickets, and access to seasonal events.",
+        },
+        silverModal: {
+            title: "Discoverer Package Benefits",
+            content: "Includes Adventurer benefits plus personalized travel recommendations, priority booking for tours, and a PEI Explorer newsletter.",
+        },
+        goldModal: {
+            title: "Voyager Package Benefits",
+            content: "Includes Discoverer benefits plus exclusive guided experiences, VIP event access, and a complimentary PEI Explorer travel kit.",
+        },
+    };
+
+    function displayModal(modal, { title, content }) {
+        modal.innerHTML = `
+            <div class="modal-content">
+                <button class="close-button" aria-label="Close">×</button>
+                <h3>${title}</h3>
+                <p>${content}</p>
+            </div>
+        `;
+        modal.showModal();
+
+        modal.querySelector(".close-button").addEventListener("click", () => {
+            modal.close();
+        });
+    }
+
+    Object.keys(buttons).forEach((key) => {
+        buttons[key].addEventListener("click", () => {
+            const modalKey = key.replace("Button", "Modal");
+            displayModal(modals[modalKey], modalContent[modalKey]);
+        });
+    });
+});
